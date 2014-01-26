@@ -100,7 +100,7 @@
     <Compile Include="frmProductManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProductManager.designer.cs">
+    <Compile Include="frmProductManager.Designer.cs">
       <DependentUpon>frmProductManager.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSupManager.cs">
@@ -111,6 +111,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TravelExpertsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TravelExpertsDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AboutBox1.resx">
       <DependentUpon>AboutBox1.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,9 +130,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPackageReport.resx">
       <DependentUpon>frmPackageReport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmProductManager.resx">
-      <DependentUpon>frmProductManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSupManager.resx">
       <DependentUpon>frmSupManager.cs</DependentUpon>
@@ -162,6 +164,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TravelExpertsDataSet.xsc">
+      <DependentUpon>TravelExpertsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TravelExpertsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TravelExpertsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TravelExpertsDataSet.xss">
+      <DependentUpon>TravelExpertsDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

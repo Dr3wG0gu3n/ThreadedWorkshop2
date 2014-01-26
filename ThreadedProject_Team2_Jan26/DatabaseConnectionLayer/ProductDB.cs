@@ -204,5 +204,36 @@ namespace TravelExperts
             }
         
         }
+
+        public static List<Product> GetAllProducts()
+        {
+            List<Product> products = new List<Product>();
+            Product prod;
+            SqlConnection connection = TravelExpertsDB.GetConnection();
+            string getProducts = "select * from Products";
+
+            SqlCommand getCommand = new SqlCommand(getProducts, connection);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = getCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    prod = new Product((int)reader["ProductId"], reader["ProdName"].ToString());
+                    products.Add(prod);
+                }
+                return products;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+        }
     }
 }
